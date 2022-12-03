@@ -1,0 +1,4 @@
+include fovkrt/*.txt
+include clshub/VERSION
+recursive-include clshub/.mim/configs *.py *.yml
+recursive-include clshub/.mim/tools *.sh *.py
