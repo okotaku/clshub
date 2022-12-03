@@ -3,7 +3,7 @@
 Prepare datasets in data directory. You can reference each datasets format on [each projects README](../../configs/projects).
 
 ```
-/path/to/data
+clshub/data
 └── rsna2022
 ```
 
@@ -13,12 +13,6 @@ Clone repo
 
 ```
 $ git clone https://github.com/okotaku/clshub
-```
-
-Set env variables
-
-```
-$ export DATA_DIR=/path/to/data
 ```
 
 Start a docker container

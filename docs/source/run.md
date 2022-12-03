@@ -8,7 +8,7 @@ For basic usage of configs, see [MMClassification: Learn about Configs](https://
 # single-gpu
 $ docker compose exec clshub mim train mmcls ${CONFIG_FILE}
 # Example
-$ docker compose exec clshub mim train mmcls configs/projects/livecell/yolox/yolox_s_livecell.py
+$ docker compose exec clshub mim train mmcls configs/projects/rsna2022/efficientnet/efficientnet-b3_2xb8_rsna2022.py
 
 # multiple-gpu
 $ docker compose exec clshub mim train mmcls ${CONFIG_FILE} --gpus ${GPUS} --launcher pytorch
@@ -18,9 +18,9 @@ $ docker compose exec clshub mim train mmcls ${CONFIG_FILE} --gpus ${GPUS} --lau
 
 ```
 # single-gpu
-$ docker compose exec clshub mim test mmdet ${CONFIG_FILE} --checkpoint ${CHECKPOINT_FILE}
+$ docker compose exec clshub mim test mmcls ${CONFIG_FILE} --checkpoint ${CHECKPOINT_FILE}
 # Example
-$ docker compose exec clshub mim test mmdet configs/projects/livecell/yolox/yolox_s_livecell.py --checkpoint work_dirs/yolox_s_livecell/epoch_100.pth
+$ docker compose exec clshub mim test mmcls configs/projects/rsna2022/efficientnet/efficientnet-b3_2xb8_rsna2022.py --checkpoint work_dirs/efficientnet-b3_2xb8_rsna2022/best_rsna2022/f1-score_cancer_epoch_15.pth
 ```
 
 # More details
