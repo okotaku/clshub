@@ -1,0 +1,8 @@
+albumentations
+imgaug
+mmcls==v1.0.0rc3
+mmengine==0.3.2
+pandas
+timm
+ujson
+wandb
