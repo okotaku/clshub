@@ -28,9 +28,9 @@ This paper presents a new vision Transformer, called Swin Transformer, that capa
 
 ## Results and models
 
-| Model  |  pF1  |               Config                |  Download   |
-| :----: | :---: | :---------------------------------: | :---------: |
-| Swin-S | 14.78 | [config](./swin-s_2xb8_rsna2022.py) | [model](<>) |
+| Model  |  pF1  |               Config                |                                                            Download                                                            |
+| :----: | :---: | :---------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+| Swin-S | 14.78 | [config](./swin-s_2xb8_rsna2022.py) | [model](https://github.com/okotaku/clshub-weights/releases/download/v0.1.0rsna2022/swin-s_2xb8_rsna2022_20221203-e4d7bd7d.pth) |
 
 ## Citation
 

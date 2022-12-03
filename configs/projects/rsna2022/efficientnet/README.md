@@ -27,9 +27,9 @@ Convolutional Neural Networks (ConvNets) are commonly developed at a fixed resou
 
 ## Results and models
 
-|      Model      | pF1 |                    Config                    |  Download   |
-| :-------------: | :-: | :------------------------------------------: | :---------: |
-| EfficientNet-B3 |     | [config](./efficientnet-b3_2xb8_rsna2022.py) | [model](<>) |
+|      Model      |  pF1  |                    Config                    |                                                                Download                                                                 |
+| :-------------: | :---: | :------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------: |
+| EfficientNet-B3 | 14.83 | [config](./efficientnet-b3_2xb8_rsna2022.py) | [model](https://github.com/okotaku/clshub-weights/releases/download/v0.1.0rsna2022/efficientnet-b3_2xb8_rsna2022_20221203-ab23317f.pth) |
 
 ## Citation
 
