@@ -142,6 +142,7 @@ class RSNA2022(BaseMetric):
         target_indices: bool = False,
     ) -> Union[torch.Tensor, List[torch.Tensor]]:
         """Calculate the precision, recall, f1-score.
+
         Args:
             pred (torch.Tensor | np.ndarray | Sequence): The prediction
                 results. A :obj:`torch.Tensor` or :obj:`np.ndarray` with
@@ -158,10 +159,7 @@ class RSNA2022(BaseMetric):
                 category index labels. If True, ``num_classes`` must be set.
                 Defaults to False.
         Returns:
-            Tuple: The tuple contains precision, recall and f1-score.
-            And the type of each item is:
-            - torch.Tensor: A tensor for each metric. The shape is (1, ) if
-              ``average`` is not None, and (C, ) if ``average`` is None.
+            Tuple: The tuple contains precision, recall, f1-score and support.
         """
 
         def _format_label(label, is_indices):
