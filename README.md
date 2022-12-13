@@ -16,6 +16,7 @@ Documentation: [docs](docs)
 ## Supported Datasets
 
 - [x] [RSNA Screening Mammography Breast Cancer Detection (Kaggle)](configs/projects/rsna2022/)
+- [x] [PetFinder.my - Pawpularity Contest (Kaggle)](configs/projects/pet2022/)
 
 ## Get Started
 
