@@ -1,0 +1,13 @@
+Collections:
+  - Name: EfficientNet
+
+Models:
+  - Name: efficientnet-b3_rsna2022
+    In Collection: YOLOX
+    Config: configs/projects/rsna2022/efficientnet/efficientnet-b3_2xb8_rsna2022.py
+    Results:
+      - Task: Image Classification
+        Dataset: rsna2022
+        Metrics:
+          pF1: 14.83
+    Weights: https://github.com/okotaku/clshub-weights/releases/download/v0.1.0rsna2022/efficientnet-b3_2xb8_rsna2022_20221203-ab23317f.pth
