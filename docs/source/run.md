@@ -1,3 +1,26 @@
+# Data Preparation
+
+Prepare datasets in data directory. You can reference each datasets format on [each projects README](../../configs/projects).
+
+```
+clshub/data
+└── rsna2022
+```
+
+# Environment setup
+
+Clone repo
+
+```
+$ git clone https://github.com/okotaku/clshub
+```
+
+Start a docker container
+
+```
+$ docker compose up -d clshub
+```
+
 # Prepare configs
 
 For basic usage of configs, see [MMClassification: Learn about Configs](https://mmclassification.readthedocs.io/en/1.x/user_guides/config.html)

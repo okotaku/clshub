@@ -1,0 +1,13 @@
+Collections:
+  - Name: Swin-Transformer
+
+Models:
+  - Name: swin-s_pet2022
+    In Collection: YOLOX
+    Config: configs/projects/pet2022/swin/swin-s_1xb16_pet2022.py
+    Results:
+      - Task: Image Classification
+        Dataset: pet2022
+        Metrics:
+          RMSE: 17.5118
+    Weights: https://github.com/okotaku/clshub-weights/releases/download/v0.1.1petfinder/swin-s_1xb16_pet2022_20221213-e120208a.pth

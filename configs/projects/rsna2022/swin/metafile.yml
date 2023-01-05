@@ -1,0 +1,13 @@
+Collections:
+  - Name: Swin-Transformer
+
+Models:
+  - Name: swin-s_rsna2022
+    In Collection: YOLOX
+    Config: configs/projects/rsna2022/swin/swin-s_2xb8_rsna2022.py
+    Results:
+      - Task: Image Classification
+        Dataset: rsna2022
+        Metrics:
+          pF1: 14.78
+    Weights: https://github.com/okotaku/clshub-weights/releases/download/v0.1.0rsna2022/swin-s_2xb8_rsna2022_20221203-e4d7bd7d.pth

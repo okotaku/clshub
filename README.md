@@ -23,7 +23,7 @@ Documentation: [docs](docs)
 Please refer to [get_started.md](docs/source/get_started.md) for get started.
 Other tutorials for:
 
-- [run](docs/source/run.md)
+- [run train](docs/source/run.md)
 
 ## Contributing
 

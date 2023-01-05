@@ -121,39 +121,40 @@ def add_mim_extension():
     os.makedirs(mim_path, exist_ok=True)
 
     for filename in filenames:
-        if osp.exists(filename):
-            src_path = osp.join(repo_path, filename)
-            tar_path = osp.join(mim_path, filename)
+        print(filename)
+        #if osp.exists(filename):
+        src_path = osp.join(repo_path, filename)
+        tar_path = osp.join(mim_path, filename)
 
-            if osp.isfile(tar_path) or osp.islink(tar_path):
-                os.remove(tar_path)
-            elif osp.isdir(tar_path):
-                shutil.rmtree(tar_path)
+        if osp.isfile(tar_path) or osp.islink(tar_path):
+            os.remove(tar_path)
+        elif osp.isdir(tar_path):
+            shutil.rmtree(tar_path)
 
-            if mode == 'symlink':
-                src_relpath = osp.relpath(src_path, osp.dirname(tar_path))
-                try:
-                    os.symlink(src_relpath, tar_path)
-                except OSError:
-                    # Creating a symbolic link on windows may raise an
-                    # `OSError: [WinError 1314]` due to privilege. If
-                    # the error happens, the src file will be copied
-                    mode = 'copy'
-                    warnings.warn(
-                        f'Failed to create a symbolic link for {src_relpath}, '
-                        f'and it will be copied to {tar_path}')
-                else:
-                    continue
-
-            if mode == 'copy':
-                if osp.isfile(src_path):
-                    shutil.copyfile(src_path, tar_path)
-                elif osp.isdir(src_path):
-                    shutil.copytree(src_path, tar_path)
-                else:
-                    warnings.warn(f'Cannot copy file {src_path}.')
+        if mode == 'symlink':
+            src_relpath = osp.relpath(src_path, osp.dirname(tar_path))
+            try:
+                os.symlink(src_relpath, tar_path)
+            except OSError:
+                # Creating a symbolic link on windows may raise an
+                # `OSError: [WinError 1314]` due to privilege. If
+                # the error happens, the src file will be copied
+                mode = 'copy'
+                warnings.warn(
+                    f'Failed to create a symbolic link for {src_relpath}, '
+                    f'and it will be copied to {tar_path}')
             else:
-                raise ValueError(f'Invalid mode {mode}')
+                continue
+
+        if mode == 'copy':
+            if osp.isfile(src_path):
+                shutil.copyfile(src_path, tar_path)
+            elif osp.isdir(src_path):
+                shutil.copytree(src_path, tar_path)
+            else:
+                warnings.warn(f'Cannot copy file {src_path}.')
+        else:
+            raise ValueError(f'Invalid mode {mode}')
 
 
 if __name__ == '__main__':

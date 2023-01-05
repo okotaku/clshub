@@ -1,0 +1,4 @@
+Import:
+  - configs/projects/pet2022/swin/metafile.yml
+  - configs/projects/rsna2022/efficientnet/metafile.yml
+  - configs/projects/rsna2022/swin/metafile.yml
